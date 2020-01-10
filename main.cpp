@@ -14,7 +14,7 @@ Features implemented in this order:
 -stable sorting by time and name
  
 TODO:
- 
+Some text here. 
 Needs Data Structure Kung Fu: Move objects into std::list, then std::lists(s)
 into std::map
 So as to sort and compute fastest, slowest, average of each activity easily
