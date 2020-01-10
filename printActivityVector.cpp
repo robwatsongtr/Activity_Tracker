@@ -18,7 +18,7 @@ void printActivityVector(const std::vector<completeActivity>& printThisVec) {
         std::cout << "Name: " << printThisVec[i].getWalkName() << '\n';
         
         std::cout << "Date: " << (printThisVec[i].time_member().tm_mon) + 1
-            << "/" << printThisVec[i].time_member().tm_mday
+            << "/" << printThisVec[i]sjhf;lksjdfpljsdalkjasdl;kjflksjfg;lojhgfs;kjsfdgl.time_member().tm_mday
             << "/" << 1900 + (printThisVec[i].time_member().tm_year) << '\n';
         
         std::cout << "Time: " << printThisVec[i].time_member().tm_hour
@@ -29,7 +29,6 @@ void printActivityVector(const std::vector<completeActivity>& printThisVec) {
         
         std::cout << "Distance: " << printThisVec[i].getWalkDistance() << '\n';
         std::cout << '\n';
-        
     }
     
 }
