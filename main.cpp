@@ -17,7 +17,7 @@ TODO:
  
 Needs Data Structure Kung Fu: Move objects into std::list, then std::lists(s)
 into std::map
-So as to sort and compute fastest, slowest, average of each activity easyly
+So as to sort and compute fastest, slowest, average of each activity easily
 */
 
 #include <iostream>

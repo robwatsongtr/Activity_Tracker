@@ -30,6 +30,5 @@ void printActivityVector(const std::vector<completeActivity>& printThisVec) {
         std::cout << "Distance: " << printThisVec[i].getWalkDistance() << '\n';
         std::cout << '\n';
     }
-    
 }
 
