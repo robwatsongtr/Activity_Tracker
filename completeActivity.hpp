@@ -29,7 +29,7 @@ public:
     bool parseTime(std::string timeStr);
     bool parseDate(std::string dateStr);
     
-    // sort functors. Why redefine () ? 
+    // sort functors 
     struct sort_by_name {
         bool operator() (const completeActivity &a, const completeActivity &b ) {
             return a.m_walkName < b.m_walkName;
