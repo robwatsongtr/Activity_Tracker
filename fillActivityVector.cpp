@@ -31,6 +31,7 @@ void fillActivityVector(std::vector<completeActivity>& fillAllActivities) {
 
     while(true) {
 
+        std::cout << '\n';
         std::cout << "Enter walk name (no spaces), Type 'exit' in name when finished.\n> ";
         std::cin >> activityName;
             if(activityName == "exit") break;
@@ -69,7 +70,7 @@ void fillActivityVector(std::vector<completeActivity>& fillAllActivities) {
         // input verified, save object in vector
         fillAllActivities.push_back(newActivity);
 
-        std::cout << "\nActivity successfully saved.\n\n";
+        std::cout << "\nActivity successfully saved.\n";
 
     }
     std::cout << '\n';
