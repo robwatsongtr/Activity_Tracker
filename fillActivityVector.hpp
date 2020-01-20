@@ -1,6 +1,6 @@
 //  ActivityTracker
 //  fillActivityVector.hpp
-//  Copyright © 2019 Robert Watson. All rights reserved.
+//  Copyright © 2019-2020 Robert Watson. All rights reserved.
 
 #ifndef fillWalkVector_hpp
 #define fillWalkVector_hpp
