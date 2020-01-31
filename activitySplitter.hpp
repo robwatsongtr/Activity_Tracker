@@ -18,6 +18,10 @@
 
 #include "completeActivity.hpp"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 140d78839002d94ea61b3431a617eea10e32acb4
 class activitySplitter {
 private:
 	std::map<std::string, std::set<completeActivity>> activity_map;
