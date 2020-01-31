@@ -19,18 +19,15 @@ double doubleFromString(const std::string& str) {
         sprintf(problem, "Error in float at position %ld", (endptr - str.c_str()) );
         throw std::invalid_argument(problem);
     }
-
-    return result;
+	return result;
 }
 
 void fillActivityVector(std::vector<completeActivity>& fillAllActivities) {
-
     std::string activityName, activityDate, activityElapsedTime, activityDistance;
     double str2doubleDist = 0.0;
     int activityElapsedTimeSec = 0;
 
     while(true) {
-
         std::cout << '\n';
         std::cout << "Enter walk name (no spaces), Type 'exit' in name when finished.\n> ";
         std::cin >> activityName;
@@ -67,12 +64,9 @@ void fillActivityVector(std::vector<completeActivity>& fillAllActivities) {
             (newActivity.time_member().tm_min * 60) + (newActivity.time_member().tm_sec);
         newActivity.setActivityElapsedTime(activityElapsedTimeSec);
 
-        // input verified, save object in vector
+        // input verified, save object in vector and output success
         fillAllActivities.push_back(newActivity);
-
-        std::cout << "\nActivity successfully saved.\n";
-
+		std::cout << "\nActivity successfully saved.\n";
     }
     std::cout << '\n';
-
 }
