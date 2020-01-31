@@ -1,6 +1,6 @@
 /*
 
-ActivityTracker 0.8
+ActivityTracker
 
 Created by Robert Watson 2019-2020
 Copyright © 2019 Robert Watson. All rights reserved.
@@ -11,7 +11,7 @@ Features implemented in this order:
 -class structure / variables, 'struct tm' for time
 -input loop, output loop
 -error handling / input parsing
--stable sorting by time and name
+-stable sorting by time and name. This will be supplanted by below:
 
 TODO:
 Some text here.
@@ -26,7 +26,7 @@ So as to sort and compute fastest, slowest, average of each activity easily
 #include "completeActivity.hpp"
 #include "printActivityVector.hpp"
 #include "fillActivityVector.hpp"
-
+#include "activitySplitter.hpp"
 
 int main() {
 
@@ -36,11 +36,10 @@ int main() {
     // program loop for console input:
     fillActivityVector(allActivities);
 
-    // sort the master vector
-    std::stable_sort(allActivities.begin(), allActivities.end(), completeActivity::sort_by_time());
-    std::stable_sort(allActivities.begin(), allActivities.end(), completeActivity::sort_by_name());
+	// convert vector to list
+
 
     // print results to console
-    printActivityVector(allActivities);
+    // printActivityVector(allActivities);
 
 }
