@@ -29,11 +29,13 @@ public:
     bool parseTime(std::string timeStr);
     bool parseDate(std::string dateStr);
 
-	// lets talk though this
+	// sort that sorts first by name then by time if the names are equal
+	// this is needed in order to store these objects in a set, these are the 'rules' to order 
 	bool operator< (const completeActivity & other) const {
 		return m_walkName < other.m_walkName
 			|| (m_walkName == other.m_walkName && m_elapsedTimeSec < other.m_elapsedTimeSec);
 	}
+
 
 private:
     struct tm m_time;

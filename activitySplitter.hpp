@@ -1,15 +1,11 @@
 //  ActivityTracker
 //  activitySplitter.hpp
 //  Copyright © 2019-2020 Robert Watson. All rights reserved.
-
-// quesitons 1/30/2019
-// would it be best to ditch printActivityVector and use this class
-// for the output as well? does cpp file get the includes of the hpp ?
+// 'Data structure kung fu'
 
 #ifndef activitySplitter_hpp
 
 #include <iostream>
-#include <list>
 #include <map>
 #include <set>
 #include <string>
@@ -18,19 +14,23 @@
 
 #include "completeActivity.hpp"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 140d78839002d94ea61b3431a617eea10e32acb4
 class activitySplitter {
 private:
+	// keys ordered by string, set is ordered. nested data strutures: sets within a map
 	std::map<std::string, std::set<completeActivity>> activity_map;
-	std::list<completeActivity> activity_list;
 
 public:
-	void vectorToListConvert(std::vector<completeActivity>& vec);
-	void doSplit(std::list<completeActivity>& activity);
-	void dump();
+	// each incoming object gets mapped to an 'act', creates a new set for each
+	// completeActivity object by inserting each into a map
+	void doSplit(std::vector<completeActivity> & activities) {
+		for (completeActivity act : activities) {
+			activity_map[act.getWalkName()].insert(act);
+		}
+	}
+
+	void dump() {
+
+	}
 
 };
 

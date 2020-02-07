@@ -5,6 +5,11 @@
 #ifndef fillWalkVector_hpp
 #define fillWalkVector_hpp
 
+#include <stdexcept>
+#include <iostream>
+#include <vector>
+#include <ctime>
+
 #include "completeActivity.hpp"
 
 void fillActivityVector(std::vector<completeActivity>& fillAllActivites);

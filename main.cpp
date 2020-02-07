@@ -36,7 +36,7 @@ int main() {
     // program loop for console input:
     fillActivityVector(allActivities);
 
-	// convert vector to list
+	
 
 
     // print results to console
