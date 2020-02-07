@@ -29,13 +29,13 @@ void fillActivityVector(std::vector<completeActivity>& fillAllActivities) {
 
     while(true) {
         std::cout << '\n';
-        std::cout << "Enter walk name (no spaces), Type 'exit' in name when finished.\n> ";
+        std::cout << "Enter Activity name (no spaces), Type 'exit' in name when finished.\n> ";
         std::cin >> activityName;
             if(activityName == "exit") break;
         std::cout << "Enter date:\n> "; std::cin >> activityDate;
         std::cout << "Enter time:\n> "; std::cin >> activityElapsedTime;
 
-        std::cout << "Enter the walk distance in miles \n> "; std::cin >> activityDistance;
+        std::cout << "Enter the Activity distance in miles \n> "; std::cin >> activityDistance;
         try {
             str2doubleDist = doubleFromString(activityDistance);
         } catch (std::exception exception) {

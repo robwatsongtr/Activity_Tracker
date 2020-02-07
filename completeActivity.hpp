@@ -9,6 +9,8 @@
 #include <string>
 #include <cstring>
 #include <algorithm>
+#include <map>
+#include <set>
 
 class completeActivity {
 
@@ -30,12 +32,11 @@ public:
     bool parseDate(std::string dateStr);
 
 	// sort that sorts first by name then by time if the names are equal
-	// this is needed in order to store these objects in a set, these are the 'rules' to order 
+	// this is needed in order to store these objects in a set, these are the 'rules' to order
 	bool operator< (const completeActivity & other) const {
 		return m_walkName < other.m_walkName
 			|| (m_walkName == other.m_walkName && m_elapsedTimeSec < other.m_elapsedTimeSec);
 	}
-
 
 private:
     struct tm m_time;
@@ -48,6 +49,15 @@ private:
     int m_elapsedTimeSec;
 
 };
+
+// facilitates output of an activity to a stream
+std::ostream & operator<<(std::ostream & , const completeActivity & );
+
+// define a type called Activity_Map to use in activitySplitter.hpp
+// that is a map that has the key as a string and the value as a set of
+// completeActivity object.
+typedef std::map< std::string, std::set<completeActivity> > Activity_Map;
+
 
 
 #endif /* completeWalk_hpp */

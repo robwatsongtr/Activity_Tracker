@@ -14,17 +14,13 @@ Features implemented in this order:
 -stable sorting by time and name. This will be supplanted by below:
 
 TODO:
-Some text here.
-Needs Data Structure Kung Fu: Move objects into std::list, then std::lists(s)
-into std::map
-So as to sort and compute fastest, slowest, average of each activity easily
+sort and compute fastest, slowest, average of each activity easily
 */
 
 #include <iostream>
 #include <vector>
 
 #include "completeActivity.hpp"
-#include "printActivityVector.hpp"
 #include "fillActivityVector.hpp"
 #include "activitySplitter.hpp"
 
@@ -33,13 +29,12 @@ int main() {
     // make the 'master vector'
     std::vector<completeActivity> allActivities;
 
-    // program loop for console input:
     fillActivityVector(allActivities);
 
-	
+	// put the walks into our map
+	auto activity_map = activitySplitter::doSplit(allActivities);
 
-
-    // print results to console
-    // printActivityVector(allActivities);
+	// print results
+	activitySplitter::dump(activity_map);
 
 }
