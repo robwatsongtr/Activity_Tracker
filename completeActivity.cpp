@@ -26,8 +26,9 @@ bool completeActivity::parseTime(std::string timeStr) {
     return m_time_is_valid;
 }
 
-// the variable stream will be type ostream 
+// the variable stream will be type ostream
 std::ostream & operator<<(std::ostream & stream, const completeActivity & activity) {
+
 	stream << "Date: " << (activity.time_member().tm_mon) + 1
 		<< "/" << activity.time_member().tm_mday
 		<< "/" << 1900 + (activity.time_member().tm_year) << '\n';

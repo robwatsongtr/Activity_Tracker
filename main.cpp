@@ -29,9 +29,10 @@ int main() {
     // make the 'master vector'
     std::vector<completeActivity> allActivities;
 
+	// fill the vector with some activity data
     fillActivityVector(allActivities);
 
-	// put the walks into our map
+	// put the activity vector in a map and set combo to sort by name
 	auto activity_map = activitySplitter::doSplit(allActivities);
 
 	// print results
