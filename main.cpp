@@ -17,13 +17,13 @@ Additional help by Robert Diamond.
 
 int main() {
 
-    // make the 'master vector'
-    std::vector<completeActivity> allActivities;
+  // make the 'master vector'
+  std::vector<completeActivity> allActivities;
 
 	// fill the vector with some activity data
-    fillActivityVector(allActivities);
+  fillActivityVector(allActivities);
 
-	// put the activity vector in a map and set combo to sort by name
+	// put the activity vector in a 'map and set combo' to sort by name
 	auto activity_map = activitySplitter::doSplit(allActivities);
 
 	// print results

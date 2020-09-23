@@ -41,30 +41,4 @@ public:
 
 };
 
-// 	static void outputSlowFastAvg(const Activity_Map & activity_map) {
-//		auto slowest = activity_map.second.begin();
-//		// .....
-//	}
-
-/*
-	auto slowest = activity_map.begin(); // iterator to first entry in map
-	auto fastest = activity_map.end();  // iterator to last entry in map
-
-	std::cout << slowest->first << std::endl;
-	std::cout << slowest->second << std::endl;
-
-	std::cout << fastest->first << std::endl;
-	std::cout << fastest->second << std::endl;
-
-	// auto median = std::advance(activity_map.begin(), activity_map.size()/2);
-	// not working! even with #include <iterator>
-*/
-
-
-
-
-
-
-
-
 #endif /* activitySplitter_hpp */
